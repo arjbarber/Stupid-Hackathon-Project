@@ -18,5 +18,11 @@ BUTTON_FONT = {
 # Button Screen Settings
 BUTTON_SCREEN_FONT = {
     "name": "Cooper Black",
-    "size": 60
+    "size": 25,
+    "color": colors.WHITE
+}
+BUTTON_PERIOD_FONT = {
+    "name": "Cooper Black",
+    "size": 60,
+    "color": colors.WHITE
 }
