@@ -2,7 +2,7 @@ import colors
 
 # Window Settings
 WIDTH = 750
-HEIGHT = 750
+HEIGHT = 500
 COLOR = colors.LIGHT_BLUE
 FPS = 60
 

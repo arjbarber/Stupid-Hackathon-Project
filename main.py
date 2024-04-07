@@ -52,9 +52,10 @@ def Button_Pressed(answer, correct):
                 open("https://youtu.be/dQw4w9WgXcQ?si=VG6kFpMeenJuBazA")
                 main()
         else:
-            answer_text = "You clicked the wrong answer! Here is your IP address."
-            second_line = get("https://api.ipify.org").content.decode('utf8')
-        
+            answer_text = "You clicked the wrong answer! Here is your IP address:"
+            second_line = second_line = time_elapsed * "."
+            if time_elapsed >= 5:
+                main()        
         
         draw_button_screen(answer_text,second_line)
 
