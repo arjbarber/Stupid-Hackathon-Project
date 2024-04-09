@@ -53,7 +53,7 @@ def Button_Pressed(answer, correct):
                 main()
         else:
             answer_text = "You clicked the wrong answer! Here is your IP address:"
-            second_line = second_line = time_elapsed * "."
+            second_line = str(get('https://api.ipify.org').content.decode('utf8')) + time_elapsed * "."
             if time_elapsed >= 5:
                 main()        
         
@@ -75,10 +75,11 @@ def draw_screen(Lbutton,Rbutton):
 def main():
     clock = pygame.time.Clock()
     run = True
+    pygame.display.set_caption("50/50")
     Lbutton = Button(L_BUTTON_IMAGE,config.BUTTON_MARGIN,config.BUTTON_MARGIN,config.LEFT_BUTTON_TEXT,config.BUTTON_FONT)
     Rbutton = Button(R_BUTTON_IMAGE,config.WIDTH/2 + config.BUTTON_MARGIN, config.BUTTON_MARGIN,config.RIGHT_BUTTON_TEXT,config.BUTTON_FONT)
     correct_ans = randint(0,1) # Left = 0, Right = 1
-    print(correct_ans)
+    # print(correct_ans) Will Tell you the correct side in the console
     while run:
         clock.tick(config.FPS)
         for event in pygame.event.get():
